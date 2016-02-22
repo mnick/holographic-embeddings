@@ -4,7 +4,7 @@ This repository holds the code for experiments in the paper
 
 ```
 Holographic Embeddings of Knowledge Graphs
-Maximilian Nickel, Lorenzo Rosasco, Maximilian Nickel, AAAI 2016.
+Maximilian Nickel, Lorenzo Rosasco, Tomaso Poggio, AAAI 2016.
 ```
 
 ## Install 
