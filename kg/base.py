@@ -24,7 +24,7 @@ class Experiment(object):
         self.parser.add_argument('--init', type=str, default='nunif', help='Initialization method')
         self.parser.add_argument('--lr', type=float, help='Learning rate')
         self.parser.add_argument('--me', type=int, help='Maximum number of epochs')
-        self.parser.add_argument('--ne', type=int, help='Numer of negative examples')
+        self.parser.add_argument('--ne', type=int, help='Numer of negative examples', default=1)
         self.parser.add_argument('--nb', type=int, help='Number of batches')
         self.parser.add_argument('--fout', type=str, help='Path to store model and results', default=None)
         self.parser.add_argument('--fin', type=str, help='Path to input data', default=None)
@@ -130,6 +130,7 @@ class Experiment(object):
         elif self.args.mode == 'lp':
             self.ev_test = self.evaluator(data['test_subs'], data['test_labels'])
             self.ev_valid = self.evaluator(data['valid_subs'], data['valid_labels'])
+
         xs = data['train_subs']
         ys = np.ones(len(xs))
 
